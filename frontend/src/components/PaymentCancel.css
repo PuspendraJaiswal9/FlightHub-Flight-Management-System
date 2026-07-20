@@ -1,0 +1,68 @@
+.payment-cancel-container {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-cancel-title {
+  color: #ef4444;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.payment-cancel-button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);
+}
+
+.payment-cancel-button:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+}
+
+@media (max-width: 768px) {
+  .payment-cancel-container {
+    padding: 20px 15px;
+    margin-top: 60px;
+  }
+
+  .payment-cancel-title {
+    font-size: 2rem;
+  }
+
+  .payment-cancel-button {
+    padding: 11px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-cancel-container {
+    margin-top: 40px;
+  }
+
+  .payment-cancel-title {
+    font-size: 1.7rem;
+  }
+
+  .payment-cancel-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

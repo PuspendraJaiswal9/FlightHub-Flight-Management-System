@@ -1,0 +1,365 @@
+.fare-container {
+  padding: 0;
+  min-height: 100vh;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.fare-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fare-title {
+  color: #1e293b;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.fare-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.fare-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(251, 146, 60, 0.1);
+  border: 3px solid #374151;
+}
+
+.fare-button {
+  margin: 5px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #1e293b;
+  color: white;
+  border: none;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.fare-button:hover {
+  background: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.3);
+}
+
+.fare-button-primary {
+  background: #3b82f6;
+}
+
+.fare-button-primary:hover {
+  background: #2563eb;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.fare-button-success {
+  background: #10b981;
+}
+
+.fare-button-success:hover {
+  background: #059669;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.fare-button-delete {
+  background: #ef4444;
+}
+
+.fare-button-delete:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.fare-button-submit {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.fare-button-search {
+  width: 100%;
+}
+
+.fare-button-delete-action {
+  width: 100%;
+}
+
+.fare-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  border: 3px solid #374151;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.fare-card:hover {
+  box-shadow: 0 8px 24px rgba(251, 146, 60, 0.15);
+  transform: translateY(-2px);
+  border-color: #1f2937;
+}
+
+.fare-input-group {
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fare-input-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.fare-input {
+  padding: 12px 16px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+
+.fare-input:focus {
+  outline: none;
+  border-color: #64748b;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(100, 116, 139, 0.1);
+}
+
+.fare-input::placeholder {
+  color: #94a3b8;
+}
+
+.fare-section-title {
+  color: #1e293b;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.fare-table-wrapper {
+  margin-top: 30px;
+}
+
+.fare-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.fare-table-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.fare-table-count {
+  font-size: 0.9rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.fare-table-container {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.fare-table-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.fare-table-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.fare-table-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.fare-table-container::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.fare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  min-width: 600px;
+}
+
+.fare-table th,
+.fare-table td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 14px;
+  text-align: left;
+  color: #475569;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.fare-table th {
+  background: #f8fafc;
+  color: #1e293b;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 0 #e2e8f0;
+}
+
+.fare-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.fare-details-title {
+  color: #1e293b;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .fare-card {
+    max-width: 100%;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fare-container {
+    padding: 0 10px;
+  }
+
+  .fare-title {
+    font-size: 1.7rem;
+  }
+
+  .fare-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .fare-actions {
+    padding: 15px;
+  }
+
+  .fare-button {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    margin: 5px 3px;
+  }
+
+  .fare-card {
+    padding: 20px 15px;
+    margin: 15px auto;
+  }
+
+  .fare-section-title {
+    font-size: 1.2rem;
+  }
+
+  .fare-input-group {
+    margin-bottom: 15px;
+  }
+
+  .fare-input {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .fare-table-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .fare-table-title {
+    font-size: 1.1rem;
+  }
+
+  .fare-table-container {
+    border-radius: 8px;
+  }
+
+  .fare-table th,
+  .fare-table td {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fare-title {
+    font-size: 1.5rem;
+  }
+
+  .fare-actions {
+    padding: 12px;
+  }
+
+  .fare-button {
+    padding: 9px 15px;
+    font-size: 0.85rem;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .fare-card {
+    padding: 18px 12px;
+  }
+
+  .fare-section-title {
+    font-size: 1.1rem;
+  }
+
+  .fare-input {
+    padding: 9px 12px;
+    font-size: 0.85rem;
+  }
+
+  .fare-table {
+    min-width: 500px;
+  }
+
+  .fare-table th,
+  .fare-table td {
+    padding: 8px 6px;
+    font-size: 0.75rem;
+  }
+}

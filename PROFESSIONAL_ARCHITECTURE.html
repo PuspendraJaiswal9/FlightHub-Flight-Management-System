@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Management System - Professional Architecture</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            background: #f5f7fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .header p {
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+        }
+        
+        .diagram-wrapper {
+            padding: 30px;
+            background: white;
+        }
+        
+        .architecture-svg {
+            width: 100%;
+            height: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .diagram-wrapper {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✈️ Flight Management System</h1>
+            <p>Microservices Architecture Diagram</p>
+        </div>
+        
+        <div class="diagram-wrapper">
+            <svg class="architecture-svg" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background -->
+                <rect width="1000" height="700" fill="#fafbfc"/>
+                
+                <!-- Title -->
+                <text x="500" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">
+                    Flight Management System - Architecture
+                </text>
+                
+                <!-- Frontend Layer -->
+                <rect x="350" y="60" width="300" height="50" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                <text x="500" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="white">
+                    React Frontend
+                </text>
+                <text x="500" y="100" text-anchor="middle" font-size="12" fill="white">
+                    Port: 3000
+                </text>
+                
+                <!-- Arrow 1 -->
+                <line x1="500" y1="110" x2="500" y2="140" stroke="#7f8c8d" stroke-width="3" marker-end="url(#arrowhead)"/>
+                
+                <!-- API Gateway -->
+                <rect x="375" y="150" width="250" height="50" rx="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                <text x="500" y="175" text-anchor="middle" font-size="14" font-weight="bold" fill="white">
+                    API Gateway
+                </text>
+                <text x="500" y="190" text-anchor="middle" font-size="12" fill="white">
+                    Port: 9090
+                </text>
+                
+                <!-- Eureka Server -->
+                <rect x="700" y="150" width="200" height="50" rx="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+                <text x="800" y="175" text-anchor="middle" font-size="14" font-weight="bold" fill="white">
+                    Eureka Server
+                </text>
+                <text x="800" y="190" text-anchor="middle" font-size="12" fill="white">
+                    Port: 8761
+                </text>
+                
+                <!-- Arrow 2 -->
+                <line x1="500" y1="200" x2="500" y2="230" stroke="#7f8c8d" stroke-width="3" marker-end="url(#arrowhead)"/>
+                
+                <!-- Microservices Layer -->
+                <rect x="100" y="240" width="800" height="80" rx="8" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
+                <text x="500" y="260" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+                    Microservices Layer
+                </text>
+                
+                <!-- Individual Services -->
+                <rect x="120" y="270" width="160" height="40" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="200" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Flight Service</text>
+                <text x="200" y="305" text-anchor="middle" font-size="10" fill="white">Port: 8081</text>
+                
+                <rect x="300" y="270" width="160" height="40" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="380" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Booking Service</text>
+                <text x="380" y="305" text-anchor="middle" font-size="10" fill="white">Port: 8082</text>
+                
+                <rect x="480" y="270" width="160" height="40" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="560" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Fare Service</text>
+                <text x="560" y="305" text-anchor="middle" font-size="10" fill="white">Port: 8083</text>
+                
+                <rect x="660" y="270" width="160" height="40" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="740" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Payment Service</text>
+                <text x="740" y="305" text-anchor="middle" font-size="10" fill="white">Port: 8084</text>
+                
+                <!-- Arrow 3 -->
+                <line x1="500" y1="320" x2="500" y2="350" stroke="#7f8c8d" stroke-width="3" marker-end="url(#arrowhead)"/>
+                
+                <!-- Database Layer -->
+                <rect x="100" y="360" width="800" height="80" rx="8" fill="#34495e" stroke="#2c3e50" stroke-width="2"/>
+                <text x="500" y="380" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+                    Database Layer (MySQL)
+                </text>
+                
+                <!-- Individual Databases -->
+                <rect x="120" y="390" width="160" height="40" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="200" y="410" text-anchor="middle" font-size="12" font-weight="bold" fill="white">flight_db</text>
+                
+                <rect x="300" y="390" width="160" height="40" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="380" y="410" text-anchor="middle" font-size="12" font-weight="bold" fill="white">booking_db</text>
+                
+                <rect x="480" y="390" width="160" height="40" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="560" y="410" text-anchor="middle" font-size="12" font-weight="bold" fill="white">fare_db</text>
+                
+                <rect x="660" y="390" width="160" height="40" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="740" y="410" text-anchor="middle" font-size="12" font-weight="bold" fill="white">user_db</text>
+                
+                <!-- Service to DB connections -->
+                <line x1="200" y1="310" x2="200" y2="390" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="380" y1="310" x2="380" y2="390" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="560" y1="310" x2="560" y2="390" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="740" y1="310" x2="740" y2="390" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+                
+                <!-- Arrow 4 -->
+                <line x1="500" y1="440" x2="500" y2="470" stroke="#7f8c8d" stroke-width="3" marker-end="url(#arrowhead)"/>
+                
+                <!-- External Services -->
+                <rect x="300" y="480" width="400" height="60" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+                <text x="500" y="500" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+                    External Services
+                </text>
+                
+                <rect x="320" y="510" width="150" height="25" rx="3" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="395" y="525" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Stripe Payment</text>
+                
+                <rect x="490" y="510" width="150" height="25" rx="3" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <text x="565" y="525" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MySQL Server</text>
+                
+                <!-- Technology Stack Box -->
+                <rect x="50" y="580" width="200" height="100" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+                <text x="150" y="600" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">
+                    Technology Stack
+                </text>
+                <text x="60" y="620" font-size="12" fill="#34495e">• Frontend: React 19.1.1</text>
+                <text x="60" y="635" font-size="12" fill="#34495e">• Backend: Spring Boot</text>
+                <text x="60" y="650" font-size="12" fill="#34495e">• Database: MySQL 8.0</text>
+                <text x="60" y="665" font-size="12" fill="#34495e">• Payment: Stripe API</text>
+                
+                <!-- Features Box -->
+                <rect x="750" y="580" width="200" height="100" rx="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+                <text x="850" y="600" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">
+                    Key Features
+                </text>
+                <text x="760" y="620" font-size="12" fill="#34495e">• Microservices Architecture</text>
+                <text x="760" y="635" font-size="12" fill="#34495e">• Service Discovery</text>
+                <text x="760" y="650" font-size="12" fill="#34495e">• API Gateway Pattern</text>
+                <text x="760" y="665" font-size="12" fill="#34495e">• JWT Authentication</text>
+                
+                <!-- Connection from Gateway to Eureka -->
+                <line x1="625" y1="175" x2="700" y2="175" stroke="#95a5a6" stroke-width="2" stroke-dasharray="3,3"/>
+                
+                <!-- Arrow marker definition -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d"/>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
